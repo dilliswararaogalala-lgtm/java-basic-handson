@@ -2,8 +2,10 @@
 
 class StringUtils {
   static boolean containsChar(String word, char target){
-    for(int i = 0; i < word.length(); i++){
-      if(word.charAt(i) == target){
+    char[] chars = word.toCharArray();
+
+    for(int i = 0; i < chars.length; i++){
+      if(chars[i] == target){
         return true;
       }
     }
@@ -13,8 +15,10 @@ class StringUtils {
 
   static String reverse(String word){
     String reversed = "";
-    for(int i = word.length() - 1; i >= 0; i--){
-      reversed += word.charAt(i);
+    char[] chars = word.toCharArray();
+
+    for(int i = chars.length - 1; i >= 0; i--){
+      reversed += chars[i];
 
     }
     return reversed;
@@ -22,11 +26,13 @@ class StringUtils {
 
   static String replaceAll(String word, char target, char replaceChar){
     String replaced = "";
-    for(int i = 0; i < word.length(); i++){
-      if(word.charAt(i) == target){
+    char[] chars = word.toCharArray();
+
+    for(int i = 0; i < chars.length; i++){
+      if(chars[i] == target){
         replaced += replaceChar;
       } else {
-        replaced += word.charAt(i);
+        replaced += chars[i];
       }
     }
     return replaced;
