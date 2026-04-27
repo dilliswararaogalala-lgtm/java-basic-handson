@@ -1,3 +1,6 @@
+import com.tw.step.domain.Money;
+import com.tw.step.domain.StringUtils;
+
 class Main {
   public static void main() {
     System.out.println(StringUtils.containsChar("Hello", 'l')); // true
@@ -6,13 +9,12 @@ class Main {
 
     Money twelveRupee = new Money(12);
     Money tenRupee = new Money(10);
-    
+
     Money twentyTwoRupee = twelveRupee.add(tenRupee);
     Money twoRupee = twelveRupee.minus(tenRupee);
 
     System.out.println(twentyTwoRupee.value); // 22
     System.out.println(twoRupee.value); // 2
-
     System.out.println(twelveRupee.value); // 12
     System.out.println(tenRupee.value); // 10
 

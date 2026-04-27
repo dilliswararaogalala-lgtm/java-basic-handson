@@ -1,7 +1,8 @@
 // StringUtils
+package com.tw.step.domain;
 
-class StringUtils {
-  static boolean containsChar(String word, char target){
+public class StringUtils {
+  public static boolean containsChar(String word, char target){
     char[] chars = word.toCharArray();
 
     for(int i = 0; i < chars.length; i++){
@@ -13,7 +14,7 @@ class StringUtils {
     return false;
   }
 
-  static String reverse(String word){
+  public static String reverse(String word){
     String reversed = "";
     char[] chars = word.toCharArray();
 
@@ -24,7 +25,7 @@ class StringUtils {
     return reversed;
   }
 
-  static String replaceAll(String word, char target, char replaceChar){
+  public static String replaceAll(String word, char target, char replaceChar){
     String replaced = "";
     char[] chars = word.toCharArray();
 

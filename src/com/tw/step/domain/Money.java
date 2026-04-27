@@ -1,9 +1,10 @@
 // Money.java
+package com.tw.step.domain;
 
-class Money {
-  int value;
+public class Money {
+  public int value;
 
-  Money(int value){
+  public Money(int value){
     this.value = value;
   }
 
